@@ -1,1 +1,31 @@
-<p>form works!</p>
+<div class="container bg-light rounded mt-4 vh-100 p-4 ">
+    <h1 class="text-center">Nuevo post</h1>
+    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+
+
+        <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input type="text" class="form-control" formControlName="titulo">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Texto</label>
+            <input type="text" class="form-control" formControlName="texto">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Imagen</label>
+            <input type="text" class="form-control" formControlName="imagen">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Categoría</label>
+            <input type="text" class="form-control" formControlName="categoria">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Fecha</label>
+            <input type="text" class="form-control" formControlName="fecha">
+        </div>
+
+
+        <input class="btn" type="submit">
+
+    </form>
+</div>
