@@ -19,7 +19,9 @@
         <div class="mb-3">
 
             <select class="form-select" aria-label="Small select example" formControlName="categoria">
-                <option>Elige una categoría</option>
+                @for(category of categories;track $index){
+                <option>{{category.titulo}}</option>
+                }
             </select>
         </div>
         <div class="mb-3">

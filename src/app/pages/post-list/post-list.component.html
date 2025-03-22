@@ -1,7 +1,9 @@
-<div class="container p-4">
+<section class="container p-4">
+
+    <h2 class="text-center">POSTS</h2>
     <select name="" id="" class="dropdown-item nav-link p-2">
         @for(category of categories;track $index){
-        <option value="">{{category}}</option>
+        <option value="">{{category.titulo}}</option>
         }
     </select>
     <div class="row">
@@ -23,4 +25,4 @@
             }
         </div>
     </div>
-</div>
+</section>

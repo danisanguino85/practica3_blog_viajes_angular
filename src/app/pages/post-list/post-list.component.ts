@@ -4,6 +4,7 @@ import { CategoriesService } from '../../services/categories.service';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../interfaces/post';
 import { DatePipe } from '@angular/common';
+import { Category } from '../../interfaces/category';
 
 @Component({
   selector: 'post-list',
@@ -19,7 +20,7 @@ export class PostListComponent {
   postService = inject(PostService)
   posts: Post[] = []
 
-  categories: string[] = []
+  categories: Category[] = []
 
   ngOnInit() {
     this.getCats()

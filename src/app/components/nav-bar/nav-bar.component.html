@@ -1,19 +1,19 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand wander" href="#">The Wanderlust Blog</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-link" [routerLink]="['/new']">Nuevo post</li>
+<div class="container">
 
-                <li class="nav-link">Noticias</li>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
 
-                <li class="nav-item dropdown">
+            <a class="navbar-brand wander" href="#">The Wanderlust Blog</a>
 
-                    <!--<ul class="dropdown-menu">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-link" [routerLink]="['/new']">Nuevo post</li>
+
+                    <li class="nav-link">Noticias</li>
+
+                    <li class="nav-item dropdown">
+
+                        <!--<ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li>
@@ -22,15 +22,16 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>-->
 
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Búsqueda">
-                <button class="btn btn-outline-success" type="submit">🔍</button>
-            </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Búsqueda">
+                    <button class="btn btn-outline-success" type="submit">🔍</button>
+                </form>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+</div>

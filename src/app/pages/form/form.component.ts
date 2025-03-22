@@ -3,6 +3,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Post } from '../../interfaces/post';
 import { PostService } from '../../services/post.service';
 import { Router, RouterLink } from '@angular/router';
+import { CategoriesService } from '../../services/categories.service';
+import { Category } from '../../interfaces/category';
 
 
 @Component({
@@ -16,6 +18,9 @@ export class FormComponent {
 
   postService = inject(PostService)
   route = inject(Router)
+  categoriesService = inject(CategoriesService)
+  categories: Category[] = []
+
 
   blogForm: FormGroup = new FormGroup({
 
@@ -37,14 +42,17 @@ export class FormComponent {
 
   })
 
-
+  ngOnInit() {
+    this.getCats()
+  }
   onSubmit() {
 
     this.postService.insertPost(this.blogForm.value)
     this.route.navigate(['/home'])
 
-
   }
 
-
+  getCats() {
+    this.categories = this.categoriesService.getAllCategories()
+  }
 }
