@@ -5,5 +5,21 @@ import { Injectable } from '@angular/core';
 })
 export class CategoriesService {
 
-  constructor() { }
+  arrCategories = ['Playa', 'Montaña', 'Ciudad', 'Rural', 'Festivales']
+
+
+
+
+  getByCat() {
+
+  }
+  getAllCategories() {
+    return this.arrCategories
+  }
+
+
+
+
 }
+
+

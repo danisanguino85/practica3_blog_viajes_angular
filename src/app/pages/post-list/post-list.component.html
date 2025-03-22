@@ -1,10 +1,26 @@
 <div class="container p-4">
+    <select name="" id="" class="dropdown-item nav-link p-2">
+        @for(category of categories;track $index){
+        <option value="">{{category}}</option>
+        }
+    </select>
+    <div class="row">
+        <div class="posts">
+            @for(post of posts;track $index){
+            <div class="card" style="width: 18rem;"><!--[routerLink]="['/post',post._id]"-->
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{post.titulo.toUpperCase()}}</h5>
+                    <p class="card-text">{{post.texto}}</p>
+                    <p class="card-text">{{post.autor}}</p>
+                    <p class="card-text"><strong>Autor</strong>{{post.autor}}</p>
+                    <p class="card-text">{{post.fecha|date}}</p>
+                    <p class="card-text"><strong>Categoría: </strong>{{post.categoria}}</p>
 
-    <div class="card" style="width: 18rem;" [routerLink]="['/post',post._id]">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">TITULO POST</h5>
-            <p class="card-text">Subtitulo post</p>
+
+                </div>
+            </div>
+            }
         </div>
     </div>
 </div>

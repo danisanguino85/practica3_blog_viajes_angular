@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Post } from '../../interfaces/post';
+import { PostService } from '../../services/post.service';
+import { Router, RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-form',
@@ -7,7 +11,11 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
+
 export class FormComponent {
+
+  postService = inject(PostService)
+  route = inject(Router)
 
   blogForm: FormGroup = new FormGroup({
 
@@ -31,7 +39,11 @@ export class FormComponent {
 
 
   onSubmit() {
-    console.log(this.blogForm.value)
+
+    this.postService.insertPost(this.blogForm.value)
+    this.route.navigate(['/home'])
+
+
   }
 
 

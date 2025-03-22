@@ -4,3 +4,8 @@
     font-size: 200%;
     font-style: normal;
 }
+
+li,
+select {
+    cursor: pointer;
+}
