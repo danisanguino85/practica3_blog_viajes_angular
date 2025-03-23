@@ -12,11 +12,11 @@ export class PostService {
 
 
   arrCategories: Category[] = [
-    { _id: 1, titulo: 'playa' },
-    { _id: 2, titulo: 'montaña' },
-    { _id: 3, titulo: 'ciudad' },
-    { _id: 4, titulo: 'rural' },
-    { _id: 5, titulo: 'festivales' },
+    { _id: 1, titulo: 'Playa' },
+    { _id: 2, titulo: 'Montaña' },
+    { _id: 3, titulo: 'Ciudad' },
+    { _id: 4, titulo: 'Rural' },
+    { _id: 5, titulo: 'Festivales' },
   ]
 
   insertPost(post: Post) {
@@ -37,7 +37,7 @@ export class PostService {
 
   getByCat(categoria: string) {
 
-    const posts = this.arrPosts.filter(post => post.categoria == categoria)
+    const posts = this.arrPosts.filter(post => post.categoria.toLowerCase() == categoria.toLowerCase())
     console.log(this.arrPosts)
     return posts
 

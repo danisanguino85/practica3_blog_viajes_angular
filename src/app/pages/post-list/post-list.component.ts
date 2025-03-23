@@ -35,7 +35,7 @@ export class PostListComponent {
 
 
   onChange($event: any) {
-    if ($event.target.value === 'todas') {
+    if ($event.target.value.toLowerCase() === 'categorias') {
       this.posts = this.postService.getAllPosts()
     } else {
 

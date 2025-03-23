@@ -13,12 +13,20 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Imagen</label>
-            <input type="text" class="form-control" formControlName="imagen">
+            <label for="basic-url" class="form-label">Imagen</label>
+            <div class="input-group">
+                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
+                    formControlName="imagen">
+            </div>
+            <div class="form-text" id="basic-addon4">Imagen</div>
         </div>
+
+
         <div class="mb-3">
 
             <select class="form-select" aria-label="Small select example" formControlName="categoria">
+                <option selected="">Selecciona una categoría</option>
                 @for(category of categories;track $index){
                 <option>{{category.titulo}}</option>
                 }
