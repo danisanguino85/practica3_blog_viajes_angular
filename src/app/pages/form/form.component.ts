@@ -3,7 +3,6 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Post } from '../../interfaces/post';
 import { PostService } from '../../services/post.service';
 import { Router, RouterLink } from '@angular/router';
-import { CategoriesService } from '../../services/categories.service';
 import { Category } from '../../interfaces/category';
 
 
@@ -18,7 +17,7 @@ export class FormComponent {
 
   postService = inject(PostService)
   route = inject(Router)
-  categoriesService = inject(CategoriesService)
+
   categories: Category[] = []
 
 
@@ -53,6 +52,6 @@ export class FormComponent {
   }
 
   getCats() {
-    this.categories = this.categoriesService.getAllCategories()
+    this.categories = this.postService.getAllCategories()
   }
 }

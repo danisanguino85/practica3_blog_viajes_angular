@@ -7,6 +7,6 @@ export interface Post {
     autor: string;
     imagen: string;
     fecha: Date;
-    categoria: Category;
+    categoria: string
 }
 

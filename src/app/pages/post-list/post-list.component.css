@@ -16,8 +16,15 @@ select {
     border-radius: 5px;
 }
 
-.posts {
-    display: flex;
-    margin-top: 40px;
-    gap: 10px;
+
+
+.text {
+    height: 100px;
+    overflow: hidden
+}
+
+.card:hover {
+    transition: .5s;
+    scale: 1.05;
+    box-shadow: 2px 2px 2px grey;
 }
