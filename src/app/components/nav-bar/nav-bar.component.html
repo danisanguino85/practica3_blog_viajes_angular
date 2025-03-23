@@ -13,10 +13,10 @@
 
                     <li class="nav-link" [routerLink]="['/news']">Noticias</li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Búsqueda"
-                        (input)="onInput($event)">
-                    <button class="btn btn-outline-success" type="submit">🔍</button>
+                <form class="d-flex" [formGroup]="nameForm" (ngSubmit)="onSubmit()">
+                    <input class="form-control me-2" for="nombre" type="search" placeholder="Search"
+                        aria-label="Búsqueda" formControlName="nombre">
+                    <input type="submit" value="🔍">
                 </form>
             </div>
         </div>

@@ -53,5 +53,18 @@ export class PostService {
 
     return this.arrPosts.find(post => post._id == idPost);
   }
+  getByName(nombre: string): number | undefined {
+
+    const select = this.arrPosts.find(post => post.titulo == nombre)
+
+    if (select) {
+      return select._id
+    } else {
+      console.log('error')
+      console.log(select)
+      return undefined;
+    }
+
+  }
 
 }

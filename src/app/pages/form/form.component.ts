@@ -24,7 +24,8 @@ export class FormComponent {
   blogForm: FormGroup = new FormGroup({
 
     titulo: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.minLength(3)
     ]),
     texto: new FormControl('', [
       Validators.required
@@ -40,14 +41,19 @@ export class FormComponent {
     ]),
 
   })
+  checkError(fieldName: string, errorName: string) {
+    return this.blogForm.get(fieldName)?.hasError(errorName) && this.blogForm.get(fieldName)?.touched
+  }
 
   ngOnInit() {
     this.getCats()
   }
   onSubmit() {
+    if (this.blogForm.valid) {
+      this.postService.insertPost(this.blogForm.value)
+      this.route.navigate(['/home'])
+    }
 
-    this.postService.insertPost(this.blogForm.value)
-    this.route.navigate(['/home'])
 
   }
 
