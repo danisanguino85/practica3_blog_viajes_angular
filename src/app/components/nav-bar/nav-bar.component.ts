@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { PostService } from '../../services/post.service';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { NgxSonnerToaster, toast } from 'ngx-sonner';
 
 @Component({
   selector: 'nav-bar',
-  imports: [RouterLink, ReactiveFormsModule],
+  imports: [RouterLink, ReactiveFormsModule, NgxSonnerToaster],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.css'
 })
@@ -22,14 +23,14 @@ export class NavBARComponent {
 
   onSubmit() {
 
-    const seleccion = this.postService.getByName(this.nameForm.value.nombre);
-    console.log(seleccion)
+    const seleccion = this.postService.getByName(this.nameForm.value.nombre.toUpperCase());
     if (seleccion !== undefined) {
       this.route.navigate(['/post', seleccion]);
 
     } else {
-      console.error('Post not found');
-      console.log(seleccion)
+      toast.message(`No se encuentra ningún post llamado ${this.nameForm.value.nombre}`, {
+        description: 'Prueba a escribir un nuevo lugar'
+      })
     }
     this.nameForm.reset()
   }

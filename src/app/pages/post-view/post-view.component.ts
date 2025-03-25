@@ -19,7 +19,7 @@ export class PostViewComponent {
   ngOnInit() {
     if (!isNaN(this.idPost)) {
       this.post = this.postservice.getById(this.idPost)
-      console.log(this.post)
+
     }
   }
 

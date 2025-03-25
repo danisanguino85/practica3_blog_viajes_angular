@@ -2,22 +2,10 @@
     width: 100vw;
     height: 50vh;
     background-image: url(../../images/image.png);
-    background-color: #575757;
+    background-color: #898787;
     background-blend-mode: multiply;
     background-position: 20%;
     align-content: center;
     text-align: center;
-
-
-    h2 {
-        color: white;
-    }
-}
-
-
-
-.btn {
-    background-color: black;
-    color: white;
 
 }

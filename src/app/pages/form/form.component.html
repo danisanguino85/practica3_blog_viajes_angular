@@ -1,27 +1,36 @@
-<div class="container bg-light rounded mt-4 vh-100 p-4 ">
-    <h1 class="text-center">Nuevo post</h1>
-    <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+<div class="container bg-dark-subtle rounded mt-4  p-4 ">
+    <h2 class="text-center">NUEVO POST</h2>
 
 
-        <div class="mb-3">
-            <label class="form-label">Título</label>
+    <form class="mb-5" [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+
+        <div class=" input-group mb-3">
+            <span class="input-group-text">Titulo</span>
             <input type="text" class="form-control" formControlName="titulo">
-            @if(checkError('titulo', 'required')){
-            <p class="error">El campo título es obligatorio</p>
-            }
         </div>
+        @if(checkError('titulo', 'required')){
+        <p class="error">El campo título es obligatorio</p>
+        }
+        <div class=" input-group mb-3">
+            <span class="input-group-text">Autor</span>
+            <input type="text" class="form-control" formControlName="autor">
+        </div>
+        @if(checkError('autor', 'required')){
+        <p class="error">El campo autor es obligatorio</p>
+        }
         <div class="input-group mb-3">
             <span class="input-group-text">Texto</span>
-            <textarea aria-label="" class="form-control" formControlName="texto"></textarea>
-            @if(checkError('titulo', 'required')){
-            <p class="error">El campo descripción es obligatorio</p>
-            }
+            <textarea aria-label="" class="form-control" formControlName="texto">
+            </textarea>
         </div>
+        @if(checkError('texto', 'required')){
+        <p class="error">El campo descripción es obligatorio</p>
+        }
 
         <div class="mb-3">
-            <label for="basic-url" class="form-label">Imagen</label>
+            <label for="basic-url" class="form-label"></label>
             <div class="input-group">
-                <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                <span class="input-group-text" id="basic-addon3">Imagen</span>
                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
                     formControlName="imagen">
             </div>
@@ -31,7 +40,6 @@
 
         </div>
 
-
         <div class="mb-3">
 
             <select class="form-select" aria-label="Small select example" formControlName="categoria">
@@ -40,20 +48,18 @@
                 <option>{{category.titulo}}</option>
                 }
             </select>
-            @if(checkError('imagen', 'required')){
-            <p class="error">Tienes que escoger una categoría</p>
-            }
         </div>
-        <div class="mb-3">
+        @if(checkError('imagen', 'required')){
+        <p class="error">Tienes que escoger una categoría</p>
+        }
+        <div class="mb-3 fecha">
             <label class="form-label">Fecha</label>
             <input type="date" class="form-control" formControlName="fecha">
-            @if(checkError('imagen', 'required')){
-            <p class="error">Tienes que seleccionar una fecha</p>
-            }
         </div>
-
-
+        @if(checkError('imagen', 'required')){
+        <p class="error">Tienes que seleccionar una fecha</p>
+        }
         <input class="btn" type="submit" value="Añadir">
-
     </form>
 </div>
+<ngx-sonner-toaster richColors position="bottom-center" />

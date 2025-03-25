@@ -4,11 +4,42 @@
 }
 
 form {
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
 }
 
 
 input.ng-invalid.ng-touched {
-    border: 1px solid red;
+    border: 1px solid rgb(174, 130, 130);
+
+}
+
+h2 {
+    margin: 30px;
+    text-shadow: 4px 4px 4px white;
+    font-size: 250%;
+}
+
+.container {
+    background-image: url(../../images/image\ copy\ 4.png);
+
+    background-blend-mode: color-burn;
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: center;
+    background-size: 100%;
+}
+
+.fecha,
+select {
+    width: 40%;
+    margin: 0 auto;
+}
+
+span {
+    text-align: left;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 150%;
 }

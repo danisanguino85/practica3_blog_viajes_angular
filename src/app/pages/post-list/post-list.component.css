@@ -5,11 +5,44 @@ select {
     border-radius: 5px;
 }
 
+.card {
+    position: relative;
+    text-align: center;
+
+}
+
+h3 {
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 120%;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+}
+
+p {
+    text-align: left;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 150%;
 
 
-.text {
-    height: 100px;
-    overflow: hidden
+}
+
+img {
+    filter: brightness(.7);
+}
+
+.by {
+    display: flex;
+    justify-content: space-around;
+
+
 }
 
 .card:hover {

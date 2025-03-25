@@ -1,13 +1,15 @@
 <section class="container bg-light rounded mt-4 vh-100 p-4">
 
-    <h2 class="card-title">{{post?.titulo?.toUpperCase()}}</h2>
+    <h2 class="card-title mb-4">{{post?.titulo?.toUpperCase()}}</h2>
     <div class="text">
         <p class="card-text">{{post?.texto}}</p>
     </div>
-    <p class="card-text">{{post?.autor}}</p>
-    <p class="card-text"><strong>Autor</strong>{{post?.autor}}</p>
-    <p class="card-text">{{post?.fecha}}</p>
-    <p class="card-text"><strong>Categoría: </strong>{{post?.categoria}}</p>
+    <div class="props">
+
+        <p class="card-text"><strong>Autor: </strong>{{post?.autor}}</p>
+        <p class="card-text"><strong>Categoría: </strong>{{post?.categoria}}</p>
+        <p class="card-text"><strong>Fecha: </strong>{{post?.fecha}}</p>
+    </div>
     <figure><img [src]="post?.imagen" alt="hola"></figure>
 
 

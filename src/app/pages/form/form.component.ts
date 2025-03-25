@@ -4,11 +4,13 @@ import { Post } from '../../interfaces/post';
 import { PostService } from '../../services/post.service';
 import { Router, RouterLink } from '@angular/router';
 import { Category } from '../../interfaces/category';
+import { NgxSonnerToaster, toast } from 'ngx-sonner';
+import Swal from 'sweetalert2'
 
 
 @Component({
   selector: 'app-form',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NgxSonnerToaster],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'
 })
@@ -26,6 +28,9 @@ export class FormComponent {
     titulo: new FormControl('', [
       Validators.required,
       Validators.minLength(3)
+    ]),
+    autor: new FormControl('', [
+      Validators.required
     ]),
     texto: new FormControl('', [
       Validators.required
@@ -51,7 +56,18 @@ export class FormComponent {
   onSubmit() {
     if (this.blogForm.valid) {
       this.postService.insertPost(this.blogForm.value)
-      this.route.navigate(['/home'])
+      toast.success('Post añadido correctamente', {
+        description: 'Ahora puedes verlo en la página principal'
+      })
+      setTimeout(() => {
+        this.route.navigate(['/home'])
+      }, 2000)
+
+    } else {
+      Swal.fire({
+        icon: 'error',
+        text: "Debes rellenar todos los campos"
+      });
     }
 
 

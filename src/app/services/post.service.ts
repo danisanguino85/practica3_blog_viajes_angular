@@ -1,23 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post';
 import { Category } from '../interfaces/category';
+import { CATEGORIES, POSTS } from '../db/posts';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  arrPosts: Post[] = []
+  arrPosts: Post[] = POSTS
 
 
 
-  arrCategories: Category[] = [
-    { _id: 1, titulo: 'Playa' },
-    { _id: 2, titulo: 'Montaña' },
-    { _id: 3, titulo: 'Ciudad' },
-    { _id: 4, titulo: 'Rural' },
-    { _id: 5, titulo: 'Festivales' },
-  ]
+  arrCategories: Category[] = CATEGORIES
 
   insertPost(post: Post) {
 
@@ -38,7 +33,7 @@ export class PostService {
   getByCat(categoria: string) {
 
     const posts = this.arrPosts.filter(post => post.categoria.toLowerCase() == categoria.toLowerCase())
-    console.log(this.arrPosts)
+
     return posts
 
   }
@@ -60,8 +55,6 @@ export class PostService {
     if (select) {
       return select._id
     } else {
-      console.log('error')
-      console.log(select)
       return undefined;
     }
 
