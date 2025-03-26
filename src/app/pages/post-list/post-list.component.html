@@ -2,7 +2,7 @@
     <div>
         <h2 class="text-center">POSTS</h2>
         <select class="form-select " (change)="onChange($event)">
-            <option value="categorias">Categorías</option>
+            <option value="categorias">Destinos</option>
             @for(category of categories;track $index){
             <option value="{{category.titulo.toLowerCase()}}">{{category.titulo}}</option>
             }
@@ -10,9 +10,9 @@
     </div>
     <div>
         <div>
-            <div class="row justify-content-between  m-5 ">
+            <div class="contenedor">
                 @for(post of posts;track $index){
-                <article class="col-12 col-md-6 col-lg-5 col-xl-3 m-5 " [routerLink]="['/post',post._id]">
+                <article class="articulos" [routerLink]="['/post',post._id]">
                     <div class="card bg-light" style="width: 18rem;">
                         <img src={{post.imagen}} class="card-img-top" alt="...">
                         <div class="card-body p-1">
@@ -20,23 +20,12 @@
                         </div>
                         <div class="by">
                             <p>by {{post.autor}}</p>
-                            <p>{{post.fecha|date}}</p>
+                            <p>{{post.fecha|date:'dd-MM-yyyy'}}</p>
                         </div>
-
                     </div>
+                    <!--<span class="badge text-bg-secondary">Nuevo</span>-->
                 </article>
-                <!--<article class="card col-12 col-md-6 col-lg-5 col-xl-3 mb-5" >
-                    <img src={{post.imagen}} class="card-img-top">
-                    <div class="card-body bg-light ">
-                        <h5 class="card-title">{{post.titulo.toUpperCase()}}</h5>
-                        <div class="text">
-                            <p class="card-text">{{post.texto}}</p>
-                        </div>
-                        <p class="card-text">{{post.autor}}</p>
-                        <p class="card-text">{{post.fecha|date}}</p>
-                        <p class="card-text"><strong>Categoría: </strong>{{post.categoria}}</p>
-                    </div>
-                </article>-->
+
                 }
             </div>
         </div>

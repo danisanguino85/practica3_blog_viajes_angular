@@ -1,7 +1,17 @@
 <header class="container">
-    <p [routerLink]="['/home']">The Wanderlust Blog</p>
+    <h1 [routerLink]="['/home']">The Wanderlust Blog</h1>
     <nav-bar></nav-bar>
 </header>
 <main>
     <router-outlet />
 </main>
+<footer>
+    <div class="container">
+        <ul>
+            <li>Copyright&copy;2025 --</li>
+            <li class="wander"> The Wanderlust Blog </li>
+            <li> -- Aviso legal -</li>
+            <li>- Cookies</li>
+        </ul>
+    </div>
+</footer>

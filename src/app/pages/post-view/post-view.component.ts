@@ -2,10 +2,11 @@ import { Component, inject, Input } from '@angular/core';
 import { PostService } from '../../services/post.service';
 import { Post } from '../../interfaces/post';
 import { ActivatedRoute } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'post-view',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './post-view.component.html',
   styleUrl: './post-view.component.css'
 })

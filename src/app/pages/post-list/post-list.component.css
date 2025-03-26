@@ -1,6 +1,6 @@
 select {
     width: 200px;
-
+    margin-bottom: 20px;
     background-color: goldenrod;
     border-radius: 5px;
 }
@@ -50,3 +50,23 @@ img {
     scale: 1.05;
     box-shadow: 2px 2px 2px grey;
 }
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.articulos {
+    margin: 10px 0;
+    position: relative;
+}
+
+/*span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red !important;
+    padding: 10px;
+}*/

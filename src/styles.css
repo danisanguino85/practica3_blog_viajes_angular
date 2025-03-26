@@ -5,19 +5,25 @@
 
 
 h1 {
-    font-family: "Boldonse", system-ui;
-    font-weight: 400;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
     font-style: normal;
-    font-size: 200%;
-    letter-spacing: 5px;
-    color: white;
+    width: 40%;
+    cursor: pointer;
+    font-size: 300%;
+    padding: 10px;
 }
 
 h2 {
     font-family: "Boldonse", system-ui;
     font-weight: 400;
     font-style: normal;
+    font-size: 200%;
+    letter-spacing: 5px;
+
 }
+
+
 
 
 h4 {

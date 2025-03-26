@@ -9,51 +9,62 @@
             <input type="text" class="form-control" formControlName="titulo">
         </div>
         @if(checkError('titulo', 'required')){
-        <p class="error">El campo título es obligatorio</p>
+        <div class="alert alert-danger" role="alert">
+            El campo título es obligatorio
+        </div>
         }
+
+
         <div class=" input-group mb-3">
             <span class="input-group-text">Autor</span>
             <input type="text" class="form-control" formControlName="autor">
         </div>
         @if(checkError('autor', 'required')){
-        <p class="error">El campo autor es obligatorio</p>
+        <div class="alert alert-danger" role="alert">
+            El campo autor es obligatorio
+        </div>
         }
         <div class="input-group mb-3">
-            <span class="input-group-text">Texto</span>
+            <span class="input-group-text">Experiencia</span>
             <textarea aria-label="" class="form-control" formControlName="texto">
             </textarea>
         </div>
         @if(checkError('texto', 'required')){
-        <p class="error">El campo descripción es obligatorio</p>
+        <div class="alert alert-danger" role="alert">
+            El campo descripción es obligatorio
+        </div>
         }
-
         <div class="mb-3">
-            <label for="basic-url" class="form-label"></label>
             <div class="input-group">
                 <span class="input-group-text" id="basic-addon3">Imagen</span>
                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
                     formControlName="imagen">
             </div>
             @if(checkError('imagen', 'required')){
-            <p class="error">Tienes que añadir una imagen del viaje</p>
+            <div class="alert alert-danger" role="alert">
+                Tienes que añadir una imagen del viaje
+            </div>
             }
 
         </div>
 
         <div class="mb-3">
-
             <select class="form-select" aria-label="Small select example" formControlName="categoria">
                 <option selected="">Selecciona una categoría</option>
                 @for(category of categories;track $index){
                 <option>{{category.titulo}}</option>
                 }
             </select>
+
         </div>
         @if(checkError('imagen', 'required')){
-        <p class="error">Tienes que escoger una categoría</p>
+        <div class="alert alert-danger" role="alert">
+            Tienes que escoger una categoría
+        </div>
         }
-        <div class="mb-3 fecha">
-            <label class="form-label">Fecha</label>
+
+        <div class=" input-group mb-3 fecha">
+            <span class="input-group-text" id="basic-addon3">Fecha</span>
             <input type="date" class="form-control" formControlName="fecha">
         </div>
         @if(checkError('imagen', 'required')){

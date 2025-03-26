@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container ">
     <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
                     <li class="nav-link" [routerLink]="['/news']">Noticias</li>
                 </ul>
                 <form class="d-flex" [formGroup]="nameForm" (ngSubmit)="onSubmit()">
-                    <input class="form-control me-2" for="nombre" type="search" placeholder="Search"
+                    <input class="form-control me-2" for="nombre" type="search" placeholder="Busca un destino"
                         aria-label="Búsqueda" formControlName="nombre">
                     <input type="submit" value="🔍">
                 </form>

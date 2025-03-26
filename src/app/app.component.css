@@ -3,15 +3,31 @@ header {
     flex-wrap: wrap;
 }
 
-p {
+nav-bar {
+    width: 60%;
+    align-content: center;
+}
+
+footer {
+    background-color: black;
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+
+
+    .container {
+        color: white;
+
+        li {
+            display: inline-block;
+            font-size: 100%;
+        }
+    }
+}
+
+.wander {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
     font-style: normal;
-    width: 30%;
-    cursor: pointer;
-    font-size: 250%;
-}
-
-nav-bar {
-    width: 70%;
+    font-size: 150%;
 }
