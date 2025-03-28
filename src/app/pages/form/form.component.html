@@ -68,7 +68,9 @@
             <input type="date" class="form-control" formControlName="fecha">
         </div>
         @if(checkError('imagen', 'required')){
-        <p class="error">Tienes que seleccionar una fecha</p>
+        <div class="alert alert-danger" role="alert">
+            Tienes que escoger una fecha
+        </div>
         }
         <input class="btn" type="submit" value="Añadir">
     </form>

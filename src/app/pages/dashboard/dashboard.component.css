@@ -11,7 +11,8 @@
 }
 
 h2 {
-    color: white
+    color: white;
+    line-height: 60px;
 }
 
 button {
@@ -22,4 +23,75 @@ button {
     &:hover {
         scale: 1.05;
     }
+}
+
+.card {
+    position: relative;
+    text-align: center;
+
+}
+
+h3 {
+    position: absolute;
+    color: white;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 120%;
+    font-family: "Boldonse", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 120%;
+    transition: 1s;
+    opacity: 0;
+}
+
+.card:hover h3 {
+    opacity: 1;
+}
+
+p {
+    text-align: left;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 150%;
+}
+
+img {
+    transition: 1s;
+}
+
+.card:hover img {
+    filter: brightness(0.7);
+}
+
+.by {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card:hover {
+    transition: 1s;
+    scale: 1.05;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.articulos {
+    margin: 10px 0;
+    position: relative;
+}
+
+.text-center {
+    color: black;
+    font-size: 120%;
 }

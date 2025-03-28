@@ -22,6 +22,12 @@ h3 {
     font-weight: 400;
     font-style: normal;
     font-size: 120%;
+    transition: 1s;
+    opacity: 0;
+}
+
+.card:hover h3 {
+    opacity: 1;
 }
 
 p {
@@ -30,23 +36,24 @@ p {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 150%;
-
-
 }
 
 img {
-    filter: brightness(.7);
+    transition: 1s;
+}
+
+.card:hover img {
+    filter: brightness(0.7);
 }
 
 .by {
     display: flex;
     justify-content: space-around;
 
-
 }
 
 .card:hover {
-    transition: .5s;
+    transition: 1s;
     scale: 1.05;
     box-shadow: 2px 2px 2px grey;
 }
@@ -54,8 +61,9 @@ img {
 .contenedor {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
+
 }
 
 .articulos {

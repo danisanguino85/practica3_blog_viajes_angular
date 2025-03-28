@@ -3,5 +3,26 @@
     <h4>"Aquel viaje que no ha dejado huella en tu corazón jamás fue un viaje"</h4>
     <button class="btn btn-dark mt-2" [routerLink]="['/new']">Nuevo post</button>
 </div>
-<post-list></post-list>
-<news></news>
+<section class="container p-4">
+    <h2 class="text-center">ÚLTIMOS POSTS</h2>
+    <div>
+        <div>
+            <div class="contenedor">
+                @for(post of ultimos;track $index){
+                <article class="articulos" [routerLink]="['/post',post._id]">
+                    <div class="card bg-light" style="width: 18rem;">
+                        <img src={{post.imagen}} class="card-img-top" alt="...">
+                        <div class="card-body p-1">
+                            <h3 class="card-text">{{post.titulo.toUpperCase()}}</h3>
+                        </div>
+                        <div class="by">
+                            <p>by {{post.autor}}</p>
+                            <p>{{post.fecha|date:'dd-MM-yyyy'}}</p>
+                        </div>
+                    </div>
+                    <!--<span class="badge text-bg-secondary">Nuevo</span>-->
+                </article>
+
+                }
+
+                <news></news>

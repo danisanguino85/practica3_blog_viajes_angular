@@ -12,5 +12,6 @@ export const routes: Routes = [
     { path: 'new', component: FormComponent },
     { path: 'post/:idPost', component: PostViewComponent },
     { path: 'news', component: NewsComponent },
+    { path: 'list', component: PostListComponent },
     { path: '**', redirectTo: '/home' }
 ];

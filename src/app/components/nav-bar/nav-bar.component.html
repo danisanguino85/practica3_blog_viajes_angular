@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-link" [routerLink]="['/new']">Nuevo post</li>
-
+                    <li class="nav-link" [routerLink]="['/list']">Posts</li>
                     <li class="nav-link" [routerLink]="['/news']">Noticias</li>
                 </ul>
                 <form class="d-flex" [formGroup]="nameForm" (ngSubmit)="onSubmit()">
