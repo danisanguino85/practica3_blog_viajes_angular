@@ -1,4 +1,10 @@
 li,
 select {
     cursor: pointer;
+    font-size: 120%;
+
+    &:hover {
+        color: goldenrod;
+        scale: 1.05;
+    }
 }

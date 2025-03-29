@@ -81,8 +81,9 @@ img {
 .contenedor {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: LEFT;
     gap: 20px;
+    margin-bottom: 30px;
 
 }
 
@@ -94,4 +95,5 @@ img {
 .text-center {
     color: black;
     font-size: 120%;
+    margin-bottom: 20px;
 }

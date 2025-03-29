@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PostService } from '../../services/post.service';
+import { News } from '../../interfaces/news';
 
 @Component({
   selector: 'news',
@@ -9,8 +11,13 @@ import { Component } from '@angular/core';
 export class NewsComponent {
 
 
+  postService = inject(PostService)
+  news: News[] = []
+  sponsored: News[] = []
 
-
-
+  ngOnInit() {
+    this.news = this.postService.getAllNews()
+    this.sponsored = this.postService.getAllSponsored()
+  }
 
 }

@@ -10,27 +10,28 @@ import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterOutlet, NavBARComponent, PostListComponent, RouterLink, NewsComponent, DatePipe],
+  imports: [RouterLink, NewsComponent, DatePipe],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
 
-  ultimo!: Post
+  //ultimo!: Post
   postService = inject(PostService)
 
   arrPosts: Post[] = POSTS
   ultimos: Post[] = []
   ngOnInit() {
     this.lastPosts()
-
+    //this.ultimo = this.arrPosts[this.arrPosts.length - 1]
   }
 
 
   lastPosts() {
-    this.ultimos = this.arrPosts.slice(-3);
+    this.ultimos = this.arrPosts.slice(-4);
     console.log(this.ultimos)
     return this.ultimos
   }
+
 
 }

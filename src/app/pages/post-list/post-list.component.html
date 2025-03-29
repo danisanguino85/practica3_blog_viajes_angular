@@ -2,7 +2,7 @@
     <div>
         <h2 class="text-center">POSTS</h2>
         <select class="form-select " (change)="onChange($event)">
-            <option value="categorias">Destinos</option>
+            <option value="categorias">Categoría</option>
             @for(category of categories;track $index){
             <option value="{{category.titulo.toLowerCase()}}">{{category.titulo}}</option>
             }
@@ -23,7 +23,7 @@
                             <p>{{post.fecha|date:'dd-MM-yyyy'}}</p>
                         </div>
                     </div>
-                    <!--<span class="badge text-bg-secondary">Nuevo</span>-->
+
                 </article>
 
                 }

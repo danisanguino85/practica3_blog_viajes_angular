@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post';
 import { Category } from '../interfaces/category';
-import { CATEGORIES, POSTS } from '../db/posts';
+import { CATEGORIES, NEWS, POSTS, SPONSORED } from '../db/posts';
+import { News } from '../interfaces/news';
 
 @Injectable({
   providedIn: 'root'
@@ -9,11 +10,9 @@ import { CATEGORIES, POSTS } from '../db/posts';
 export class PostService {
 
   arrPosts: Post[] = POSTS
-
-
-
   arrCategories: Category[] = CATEGORIES
-
+  arrNews: News[] = NEWS
+  arrSpsonsored: News[] = SPONSORED
   insertPost(post: Post) {
 
     post._id = Date.now()
@@ -58,6 +57,12 @@ export class PostService {
       return undefined;
     }
 
+  }
+  getAllNews() {
+    return this.arrNews
+  }
+  getAllSponsored() {
+    return this.arrSpsonsored
   }
 
 }

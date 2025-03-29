@@ -10,8 +10,8 @@ nav-bar {
 
 footer {
     background-color: black;
-    position: sticky;
-    bottom: 0;
+    /*position: sticky;
+    bottom: 0;*/
     padding: 10px;
 
 
@@ -30,4 +30,26 @@ footer {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 150%;
+}
+
+footer div.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    padding-right: 10px;
+}
+
+li:not(:first-child):hover {
+    color: goldenrod;
+}
+
+i {
+    color: white;
+    padding: 10px;
+
+    &:hover {
+        scale: 1.5
+    }
 }
