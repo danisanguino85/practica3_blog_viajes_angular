@@ -6,6 +6,10 @@ figure {
     max-width: 700px;
 }
 
+h2 {
+    line-height: 60px;
+}
+
 img {
     width: 100%;
 }
