@@ -43,31 +43,31 @@ La maquetación la tendréis que hacer con CSS y Bootstrap como framework de css
 
 **PASOS A SEGUIR:**
 
-✅ Definir el interfaz de datos de nuestra aplicación. En este caso tendremos que definir el interfaz Post que cuenta con las siguientes propiedades:
-✅
+ Definir el interfaz de datos de nuestra aplicación. En este caso tendremos que definir el interfaz Post que cuenta con las siguientes propiedades:
+
 - **id, Titulo, texto, autor, imagen (puede ser una url), fecha, categoria:ICategory**
 
 Y el interfaz de Category que cuenta con las siguientes propiedades.
 
 - **id, Titulo**
 
-✅El siguiente paso es la creación del Servicio que se encargará de manejar la información de nuestra aplicación.
+El siguiente paso es la creación del Servicio que se encargará de manejar la información de nuestra aplicación.
 
-✅Dentro del servicio necesitamos definir un array como propiedad del mismo donde insertaremos los diferentes Post. Y otro array como propiedad donde crearemos 5 categorías, Playa, Montaña, Ciudad, Rural, Festivales.
+Dentro del servicio necesitamos definir un array como propiedad del mismo donde insertaremos los diferentes Post. Y otro array como propiedad donde crearemos 5 categorías, Playa, Montaña, Ciudad, Rural, Festivales.
 
-✅Dicho servicio dispondrá de un método **insert(Post)** que nos permitirá agregar los Post cuando lo indiquemos desde el formulario
+Dicho servicio dispondrá de un método **insert(Post)** que nos permitirá agregar los Post cuando lo indiquemos desde el formulario
 
-✅Además incluiremos el método **getAll** para recuperar todos los Post de nuestro blog
+Además incluiremos el método **getAll** para recuperar todos los Post de nuestro blog
 
 Y por último definiremos el método **getByCategoria(cat)** para que nos devuelva los post de una categoría concreta
 
 El siguiente elemento a definir es el componente **BlogComponent** Se trata de un componente que, recibe del servicio todos los Post y los muestra de manera ordenada.
 
-✅Disponer de un selector de categorías que nos permitan filtrar por categoría. Este se llenará desde una array de categorías del servicio el servicio a través de un método
+Disponer de un selector de categorías que nos permitan filtrar por categoría. Este se llenará desde una array de categorías del servicio el servicio a través de un método
 
 **getAllCategories()**
 
-✅Metodo **getById(id**) que me devolverá la información de un solo post.
+Metodo **getById(id**) que me devolverá la información de un solo post.
 
 Desarrollaremos el componente **FormularioComponent** Este componente representa un formulario con los diferentes campos del modelo Post. Cuando pulsemos el botón enviar, el formulario debe mandar al servicio la información del nuevo Post para que se almacene junto a los demás, previamente de haberlo validado.
 

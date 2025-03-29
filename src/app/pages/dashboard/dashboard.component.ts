@@ -3,9 +3,9 @@ import { NavBARComponent } from '../../components/nav-bar/nav-bar.component';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { PostListComponent } from '../post-list/post-list.component';
 import { NewsComponent } from '../news/news.component';
-import { PostService } from '../../services/post.service';
+import { PostService } from '../../services/blog.service';
 import { Post } from '../../interfaces/post';
-import { POSTS } from '../../db/posts';
+import { POSTS } from '../../db/arraysMuestra';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -16,22 +16,20 @@ import { DatePipe } from '@angular/common';
 })
 export class DashboardComponent {
 
-  //ultimo!: Post
+
   postService = inject(PostService)
 
   arrPosts: Post[] = POSTS
   ultimos: Post[] = []
+
   ngOnInit() {
     this.lastPosts()
-    //this.ultimo = this.arrPosts[this.arrPosts.length - 1]
+
   }
 
-
   lastPosts() {
-    this.ultimos = this.arrPosts.slice(-4);
+    this.ultimos = this.arrPosts.slice(-3);
     console.log(this.ultimos)
     return this.ultimos
   }
-
-
 }

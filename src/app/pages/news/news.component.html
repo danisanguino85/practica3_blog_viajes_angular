@@ -1,22 +1,18 @@
 <div class="contenedor">
     <section class="container noticias">
-        <h2>NOTICIAS</h2>
-        <div class=" news">
-            @for(oneNews of news;track $index){
-            <article>
-                <div class="card mb-3" style="max-width: 700px;height: 390px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src={{oneNews.imagen}} class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">{{oneNews.titulo}}</h5>
-                                <p class="card-text">{{oneNews.entradilla}}</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated </small>
-                                </p>
-                            </div>
-                        </div>
+        <h2>ARTÍCULOS</h2>
+        <div class="articulos">
+            @for(article of articles;track $index){
+            <article class="articulo-card">
+                <div>
+                    <h3 class="card-title">{{article.titulo}}</h3>
+                    <p class="card-text">{{article.entradilla}}</p>
+                    <div class="flex-boton">
+                        <figure>
+                            <img src={{article.imagen}} alt="...">
+                        </figure>
+                        <button [routerLink]="['/articles', article._id]">
+                            Ver artículo ✈️</button>
                     </div>
                 </div>
             </article>
@@ -24,20 +20,21 @@
         </div>
     </section>
     <section class="container patrocinados">
-        <h2>PATROCINADAS</h2>
-
-        @for(ad of sponsored;track $index){
-        <article>
-            <div class="card p-3 mb-3" style="width: 20rem; height:390px">
-                <img src={{ad.imagen}} class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ad.titulo}}</h5>
-                    <p class="card-text">{{ad.entradilla}}</p>
-                    <a href={{ad.url}} class="btn btn-primary">Ver más</a>
+        <h2>NOTICIAS</h2>
+        <div>
+            @for(ad of sponsored;track $index){
+            <article>
+                <div class="card h-100 p-3 mb-3" style="width: 18rem; ">
+                    <img src={{ad.imagen}} class="card-img-top" alt="...">
+                    <div class="card-body ">
+                        <h3 class="card-title">{{ad.titulo}}</h3>
+                        <p class="card-text ">{{ad.entradilla}}
+                            <small>Enlace publicitario</small>
+                    </div>
+                    <a href={{ad.url}}> <button>Ver más</button></a>
                 </div>
-            </div>
-        </article>
-        }
-
+            </article>
+            }
+        </div>
     </section>
 </div>

@@ -1,3 +1,24 @@
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 120%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+h1 {
+    width: 35%;
+}
+
 li,
 select {
     cursor: pointer;
@@ -7,4 +28,39 @@ select {
         color: goldenrod;
         scale: 1.05;
     }
+}
+
+input {
+    height: 40px;
+    margin: 10px;
+}
+
+li {
+    display: inline-block;
+    padding-right: 20px;
+
+
+}
+
+@media(max-width: 1200px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+
+    }
+
+    ul {
+        position: static;
+        transform: none;
+
+
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+
+
 }

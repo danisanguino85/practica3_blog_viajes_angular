@@ -5,6 +5,7 @@ import { PostViewComponent } from './pages/post-view/post-view.component';
 
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { NewsComponent } from './pages/news/news.component';
+import { ArticlesViewComponent } from './pages/articles-view/articles-view.component';
 
 export const routes: Routes = [
     { path: ' ', pathMatch: 'full', redirectTo: '/home' },
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'new', component: FormComponent },
     { path: 'post/:idPost', component: PostViewComponent },
     { path: 'news', component: NewsComponent },
-    { path: 'list', component: PostListComponent },
+    { path: 'posts', component: PostListComponent },
+    { path: 'articles/:idArticle', component: ArticlesViewComponent },
     { path: '**', redirectTo: '/home' }
 ];

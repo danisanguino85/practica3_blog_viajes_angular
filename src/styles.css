@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 
+section {
+    margin-bottom: 150px;
+}
 
 h1 {
     font-family: "Caveat", cursive;
@@ -11,7 +14,7 @@ h1 {
     width: 40%;
     cursor: pointer;
     font-size: 300%;
-    padding: 10px;
+
 }
 
 h2 {
@@ -20,11 +23,7 @@ h2 {
     font-style: normal;
     font-size: 200%;
     letter-spacing: 5px;
-
 }
-
-
-
 
 h4 {
     font-family: "Amatic SC", sans-serif;

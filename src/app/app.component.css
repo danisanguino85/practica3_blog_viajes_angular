@@ -1,19 +1,8 @@
-header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav-bar {
-    width: 60%;
-    align-content: center;
-}
-
 footer {
     background-color: black;
     /*position: sticky;
     bottom: 0;*/
     padding: 10px;
-
 
     .container {
         color: white;
@@ -30,6 +19,12 @@ footer {
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 150%;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 footer div.container {
@@ -39,10 +34,10 @@ footer div.container {
 
 li {
     padding-right: 10px;
-}
 
-li:not(:first-child):hover {
-    color: goldenrod;
+    &:hover:not(:first-child) {
+        scale: 1.05;
+    }
 }
 
 i {
@@ -50,6 +45,20 @@ i {
     padding: 10px;
 
     &:hover {
-        scale: 1.5
+        scale: 1.05
+    }
+}
+
+@media(max-width:990px) {
+
+    nav-bar {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    header.container {
+        flex-direction: column;
+        justify-content: center;
     }
 }

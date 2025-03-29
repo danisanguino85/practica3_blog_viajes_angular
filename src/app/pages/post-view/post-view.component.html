@@ -1,7 +1,11 @@
-<section class="container bg-light rounded mt-4 vh-100 p-4">
-    <h4 class="card-text">{{post?.categoria}}</h4>
-    <h2 class="card-title mb-4">{{post?.titulo?.toUpperCase()}}</h2>
-    <h5>By {{post?.autor}} | {{post?.fecha | date:'dd-MM-yyyy'}}</h5>
-    <p>{{post?.texto}}</p>
-    <figure><img [src]="post?.imagen" alt="hola"></figure>
+<section class="container bg-light rounded mt-4  p-4">
+    <div>
+        <h4 class="card-text">{{post?.categoria}}</h4>
+        <h2 class="card-title mb-4">{{post?.titulo?.toUpperCase()}}</h2>
+        <h5>By {{post?.autor}} , {{post?.fecha | date:'dd-MM-yyyy'}}</h5>
+        <p>{{post?.texto}}</p>
+        <figure>
+            <img [src]="post?.imagen" alt="hola">
+        </figure>
+    </div>
 </section>

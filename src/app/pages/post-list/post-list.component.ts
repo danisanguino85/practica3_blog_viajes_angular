@@ -1,6 +1,6 @@
 import { Component, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PostService } from '../../services/post.service';
+import { PostService } from '../../services/blog.service';
 import { Post } from '../../interfaces/post';
 import { DatePipe } from '@angular/common';
 import { Category } from '../../interfaces/category';
@@ -13,8 +13,6 @@ import { Category } from '../../interfaces/category';
 })
 export class PostListComponent {
 
-
-
   postService = inject(PostService)
 
   posts!: Post[]
@@ -25,15 +23,12 @@ export class PostListComponent {
     this.getCats()
     this.posts = this.postService.getAllPosts()
 
-
   }
 
   getCats() {
     this.categories = this.postService.getAllCategories()
 
   }
-
-
   onChange($event: any) {
     if ($event.target.value.toLowerCase() === 'categorias') {
       this.posts = this.postService.getAllPosts()
@@ -44,9 +39,6 @@ export class PostListComponent {
       console.log($event.target.value)
     }
   }
-
-
-
 
 }
 

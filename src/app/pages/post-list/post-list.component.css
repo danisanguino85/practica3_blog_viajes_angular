@@ -1,5 +1,13 @@
-section {
-    margin-bottom: 80px;
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.articulos {
+    margin: 10px 0;
+    position: relative;
 }
 
 select {
@@ -13,10 +21,9 @@ select {
     }
 }
 
-.card {
+div.card {
     position: relative;
-    text-align: center;
-
+    cursor: pointer;
 
 }
 
@@ -31,12 +38,6 @@ h3 {
     font-weight: 400;
     font-style: normal;
     font-size: 120%;
-    transition: 1s;
-    opacity: 0;
-}
-
-.card:hover h3 {
-    opacity: 1;
 }
 
 p {
@@ -47,35 +48,35 @@ p {
     font-size: 150%;
 }
 
-img {
-    transition: 1s;
+li {
+    text-align: left;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 130%;
+    text-transform: capitalize;
 }
 
-.card:hover img {
+img {
+    transition: .5s;
     filter: brightness(0.7);
+    height: 200px;
 }
 
 .by {
     display: flex;
     justify-content: space-around;
-
 }
 
 .card:hover {
-    transition: 1s;
+    transition: .5s;
     scale: 1.05;
     box-shadow: 2px 2px 2px grey;
 }
 
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+@media(max-width:1004px) {
+    select {
+        margin: 20px auto;
+    }
 
-}
-
-.articulos {
-    margin: 10px 0;
-    position: relative;
 }

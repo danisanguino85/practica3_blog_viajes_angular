@@ -13,19 +13,18 @@
             <div class="contenedor">
                 @for(post of posts;track $index){
                 <article class="articulos" [routerLink]="['/post',post._id]">
-                    <div class="card bg-light" style="width: 18rem;">
+                    <div class="card h-100 bg-light" style="width: 18rem;">
                         <img src={{post.imagen}} class="card-img-top" alt="...">
                         <div class="card-body p-1">
                             <h3 class="card-text">{{post.titulo.toUpperCase()}}</h3>
                         </div>
-                        <div class="by">
-                            <p>by {{post.autor}}</p>
-                            <p>{{post.fecha|date:'dd-MM-yyyy'}}</p>
-                        </div>
+                        <ul class="by list-group list-group-flush">
+                            <li class="list-group-item"><strong>Por: </strong>{{post.autor}} {{post.apellidos}}</li>
+                            <li class="list-group-item"><strong>Categoría:</strong>{{post.categoria}}</li>
+                            <li class="list-group-item"><strong>Entrada: </strong>{{post.fecha|date:'dd-MM-yyyy'}}</li>
+                        </ul>
                     </div>
-
                 </article>
-
                 }
             </div>
         </div>

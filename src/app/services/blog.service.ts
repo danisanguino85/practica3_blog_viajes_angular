@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post';
 import { Category } from '../interfaces/category';
-import { CATEGORIES, NEWS, POSTS, SPONSORED } from '../db/posts';
+import { ARTICULOS, CATEGORIES, POSTS, SPONSORED } from '../db/arraysMuestra';
 import { News } from '../interfaces/news';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class PostService {
 
   arrPosts: Post[] = POSTS
   arrCategories: Category[] = CATEGORIES
-  arrNews: News[] = NEWS
+  arrArticles: News[] = ARTICULOS
   arrSpsonsored: News[] = SPONSORED
   insertPost(post: Post) {
 
@@ -42,11 +42,15 @@ export class PostService {
     return this.arrCategories
   }
 
-
   getById(idPost: number) {
 
     return this.arrPosts.find(post => post._id == idPost);
   }
+
+  getArticleById(idArticle: number) {
+    return this.arrArticles.find(article => article._id == idArticle)
+  }
+
   getByName(nombre: string): number | undefined {
 
     const select = this.arrPosts.find(post => post.titulo == nombre)
@@ -59,7 +63,7 @@ export class PostService {
 
   }
   getAllNews() {
-    return this.arrNews
+    return this.arrArticles
   }
   getAllSponsored() {
     return this.arrSpsonsored

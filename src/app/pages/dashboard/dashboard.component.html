@@ -10,8 +10,8 @@
             <div class="contenedor">
                 @for(post of ultimos;track $index){
                 <article class="articulos" [routerLink]="['/post',post._id]">
-                    <div class="card bg-light" style="width: 18rem;">
-                        <img src={{post.imagen}} class="card-img-top" alt="...">
+                    <div class="card h-100 bg-light" style="width: 18rem;">
+                        <img src={{post.imagen}} class="card-img-top h-100" alt="...">
                         <div class="card-body p-1">
                             <h3 class="card-text">{{post.titulo.toUpperCase()}}</h3>
                         </div>

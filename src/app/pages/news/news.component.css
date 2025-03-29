@@ -3,33 +3,102 @@
     flex-wrap: wrap;
     background-color: rgb(238, 238, 241);
     margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 100px;
 }
 
-
-.noticias {
-    width: 70%;
+.flex-boton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
 }
 
+button {
+    padding: 10px;
+    background-color: gold;
+    border: 1px solid goldenrod;
+    transition: .5s;
+    border-radius: 5px;
+    height: 50px;
+    margin: 10px;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.articulo-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+
+    p {
+        margin: 10px 0 10px 0;
+    }
+
+    figure {
+        width: 60%;
+    }
+
+    div {
+        width: 100%;
+        padding: 20px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.articulos article {
+    border: 1px solid rgb(216, 213, 213);
+}
+
+article {
+    margin-bottom: 20px;
+    border-radius: 5px;
 
 
-.news,
+    a {
+        margin: 0 auto;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+small {
+    color: grey;
+}
+
+.articulos,
 .patrocinados {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+.noticias {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.patrocinados {
+    width: 40%;
+}
+
+article {
+    position: relative;
 }
 
 .card-img-top {
-    height: 90px;
-    width: 90px;
+    width: 100px;
     margin: 0 auto;
     box-sizing: content-box;
 }
 
-.patrocinados {
-    width: 30%;
-}
 
 h2 {
     color: black;
@@ -38,11 +107,43 @@ h2 {
     margin: 40px auto;
 }
 
-section {
-    margin-bottom: 80px;
-
+h3 {
+    font-size: 130%;
+    font-weight: bold;
 }
 
-article {
-    margin-bottom: 20px;
+@media(max-width:1004px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .patrocinados>div {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .articulo-card {
+        flex-direction: column;
+        width: 130%;
+
+        div {
+            width: 100%;
+        }
+
+        figure {
+            width: 100%;
+        }
+
+        button {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .patrocinados>div {
+        flex-direction: column;
+
+    }
 }

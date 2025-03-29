@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Post } from '../../interfaces/post';
-import { PostService } from '../../services/post.service';
+import { PostService } from '../../services/blog.service';
 import { Router, RouterLink } from '@angular/router';
 import { Category } from '../../interfaces/category';
 import { NgxSonnerToaster, toast } from 'ngx-sonner';
@@ -30,19 +30,29 @@ export class FormComponent {
       Validators.minLength(3)
     ]),
     autor: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.minLength(3),
+      Validators.maxLength(20)
+
+    ]),
+    apellidos: new FormControl('', [
+      Validators.required,
+      Validators.maxLength(30)
     ]),
     texto: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.minLength(100)
     ]),
     imagen: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.pattern(/https?:\/\/.+/)
     ]),
     categoria: new FormControl('', [
       Validators.required
     ]),
     fecha: new FormControl('', [
-      Validators.required
+      Validators.required,
+
     ]),
 
   })
@@ -69,8 +79,6 @@ export class FormComponent {
         text: "Debes rellenar todos los campos"
       });
     }
-
-
   }
 
   getCats() {

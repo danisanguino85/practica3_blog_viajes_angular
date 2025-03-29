@@ -1,9 +1,6 @@
 <div class="container bg-dark-subtle rounded mt-4  p-4 ">
     <h2 class="text-center">NUEVO POST</h2>
-
-
     <form class="mb-5" [formGroup]="blogForm" (ngSubmit)="onSubmit()">
-
         <div class=" input-group mb-3">
             <span class="input-group-text">Titulo</span>
             <input type="text" class="form-control" formControlName="titulo">
@@ -13,15 +10,22 @@
             El campo título es obligatorio
         </div>
         }
-
-
         <div class=" input-group mb-3">
-            <span class="input-group-text">Autor</span>
+            <span class="input-group-text">Nombre</span>
             <input type="text" class="form-control" formControlName="autor">
         </div>
         @if(checkError('autor', 'required')){
         <div class="alert alert-danger" role="alert">
             El campo autor es obligatorio
+        </div>
+        }
+        <div class=" input-group mb-3">
+            <span class="input-group-text">Apellidos</span>
+            <input type="text" class="form-control" formControlName="apellidos">
+        </div>
+        @if(checkError('autor', 'required')){
+        <div class="alert alert-danger" role="alert">
+            El campo apellidos es obligatorio
         </div>
         }
         <div class="input-group mb-3">
@@ -42,7 +46,7 @@
             </div>
             @if(checkError('imagen', 'required')){
             <div class="alert alert-danger" role="alert">
-                Tienes que añadir una imagen del viaje
+                Tienes que añadir una url de una imagen
             </div>
             }
 
@@ -55,7 +59,6 @@
                 <option>{{category.titulo}}</option>
                 }
             </select>
-
         </div>
         @if(checkError('imagen', 'required')){
         <div class="alert alert-danger" role="alert">
@@ -64,7 +67,7 @@
         }
 
         <div class=" input-group mb-3 fecha">
-            <span class="input-group-text" id="basic-addon3">Fecha</span>
+            <span class="input-group-text" id="basic-addon3">Fecha viaje</span>
             <input type="date" class="form-control" formControlName="fecha">
         </div>
         @if(checkError('imagen', 'required')){

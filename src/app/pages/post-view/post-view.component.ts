@@ -1,5 +1,5 @@
 import { Component, inject, Input } from '@angular/core';
-import { PostService } from '../../services/post.service';
+import { PostService } from '../../services/blog.service';
 import { Post } from '../../interfaces/post';
 import { ActivatedRoute } from '@angular/router';
 import { DatePipe } from '@angular/common';
@@ -20,9 +20,6 @@ export class PostViewComponent {
   ngOnInit() {
     if (!isNaN(this.idPost)) {
       this.post = this.postservice.getById(this.idPost)
-
     }
   }
-
-
 }
