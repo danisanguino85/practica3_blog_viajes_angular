@@ -12,6 +12,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: end;
+
 }
 
 button {
@@ -61,7 +62,6 @@ article {
     margin-bottom: 20px;
     border-radius: 5px;
 
-
     a {
         margin: 0 auto;
         text-decoration: none;
@@ -93,7 +93,7 @@ article {
     position: relative;
 }
 
-.card-img-top {
+button .card-img-top {
     width: 100px;
     margin: 0 auto;
     box-sizing: content-box;

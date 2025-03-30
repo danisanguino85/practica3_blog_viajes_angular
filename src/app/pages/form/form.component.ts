@@ -41,7 +41,6 @@ export class FormComponent {
     ]),
     texto: new FormControl('', [
       Validators.required,
-      Validators.minLength(100)
     ]),
     imagen: new FormControl('', [
       Validators.required,
