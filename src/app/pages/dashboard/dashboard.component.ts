@@ -19,10 +19,12 @@ export class DashboardComponent {
 
   postService = inject(PostService)
 
-  arrPosts: Post[] = POSTS
+  arrPosts: Post[] = this.postService.getAllPosts()
   ultimos: Post[] = []
 
+
   ngOnInit() {
+
     this.lastPosts()
 
   }

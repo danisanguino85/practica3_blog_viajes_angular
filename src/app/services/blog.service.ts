@@ -9,10 +9,18 @@ import { News } from '../interfaces/news';
 })
 export class PostService {
 
-  arrPosts: Post[] = POSTS
+  arrPosts: Post[] = []
   arrCategories: Category[] = CATEGORIES
   arrArticles: News[] = ARTICULOS
   arrSpsonsored: News[] = SPONSORED
+
+
+  constructor() {
+    if (!localStorage.getItem('posts')) {
+      localStorage.setItem('posts', JSON.stringify(POSTS))
+    }
+  }
+
   insertPost(post: Post) {
 
     post._id = Date.now()
@@ -22,10 +30,7 @@ export class PostService {
   }
 
   getAllPosts() {
-    const posts = localStorage.getItem('posts');
-    if (posts) {
-      this.arrPosts = JSON.parse(posts);
-    }
+    this.arrPosts = JSON.parse(localStorage.getItem('posts') || '[]')
     return this.arrPosts
   }
 
